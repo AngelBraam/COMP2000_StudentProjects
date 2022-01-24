@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -12,6 +13,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import com.example.comp2000_studentprojects.R;
 import com.example.comp2000_studentprojects.databinding.FragmentHomeBinding;
+import com.google.android.material.snackbar.Snackbar;
 
 public class HomeFragment extends Fragment {
 
@@ -25,7 +27,6 @@ public class HomeFragment extends Fragment {
 
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
-
         return root;
     }
 
@@ -34,4 +35,21 @@ public class HomeFragment extends Fragment {
         super.onDestroyView();
         binding = null;
     }
+    Button btnSubmit = (Button) findViewById(R.id.btnSubmitProject);
+    btnSubmit.setOnClickListener(new View.OnClickListener()
+
+    {
+        @Override
+        public void onClick (View v)
+        {
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+
+                }
+            });
+        }
+    }
 }
+
+    //public void projectSubmission(View v){
