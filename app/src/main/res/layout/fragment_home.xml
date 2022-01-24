@@ -19,5 +19,91 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintVertical_bias="0.011"
+            android:text="Student project submission"/>
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/editDescription"
+            android:hint="Description"
+            app:layout_constraintStart_toStartOf="@+id/editTitle"
+            app:layout_constraintEnd_toEndOf="@+id/editTitle"
+            app:layout_constraintTop_toBottomOf="@+id/editTitle"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintBottom_toTopOf="@+id/editYear"/>
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/editStudentID"
+            android:hint="Student ID"
+            tools:layout_editor_absoluteX="99dp"
+            app:layout_constraintTop_toBottomOf="@+id/text_home"
+            app:layout_constraintBottom_toTopOf="@+id/editTitle"/>
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/editTitle"
+            android:hint="Title"
+            app:layout_constraintStart_toStartOf="@+id/editStudentID"
+            app:layout_constraintEnd_toEndOf="@+id/editStudentID"
+            app:layout_constraintTop_toBottomOf="@+id/editStudentID"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintBottom_toTopOf="@+id/editDescription"/>
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/editYear"
+            android:hint="Year of study"
+            app:layout_constraintStart_toStartOf="@+id/editDescription"
+            app:layout_constraintEnd_toEndOf="@+id/editDescription"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintTop_toBottomOf="@+id/editDescription"
+            app:layout_constraintBottom_toTopOf="@+id/editFirstName"/>
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/editFirstName"
+            tools:layout_editor_absoluteX="99dp"
+            android:hint="First Name"
+            app:layout_constraintTop_toBottomOf="@+id/editYear"
+            app:layout_constraintBottom_toTopOf="@+id/editLastName"/>
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/editLastName"
+            tools:layout_editor_absoluteX="99dp"
+            android:hint="Last Name"
+            app:layout_constraintTop_toBottomOf="@+id/editFirstName"
+            app:layout_constraintBottom_toTopOf="@+id/btnSubmitProject"/>
+
+    <Button
+            android:text="Submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnSubmitProject"
+            tools:layout_editor_absoluteX="161dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editLastName"
+            />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
