@@ -61,11 +61,5 @@ public class MainActivity extends AppCompatActivity {
                 || super.onSupportNavigateUp();
     }
 
-    //public class SubmitProjectButton extends AppCompatActivity{
-      //  private Button
-    //}
-    //@Override
-    //public void onClick(@+id/btnSubmitProject){
-
-    //}
+    RequestQueue queue = Volley.newRequestQueue(MainActivity.this);
 }

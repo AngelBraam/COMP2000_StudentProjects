@@ -46,7 +46,6 @@ public class GalleryFragment extends Fragment {
     btnSubmit.setOnClickListener(new View.OnClickListener()
 
     {
-        @Override
         public void onClick (View v)
         {
             new Thread(new Runnable() {
@@ -56,18 +55,19 @@ public class GalleryFragment extends Fragment {
                     JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
                         @Override
                         public void onResponse(JSONObject studentProjects) {
-                            @Override
                             public void onResponse (JsonObject studentProjects){
                                 findViewById(R.id.txtViewProjects).setText(response.toString());
                             },new Response.ErrorListener() {
                                 @Override
                                 public void onErrorResponse(VolleyError error){
-                                    Toast.makeText(GalleryFragment.this, "Error", Toast.LENGTH_LONG).show();
+                                    Toast.makeText(MainActivity.this,
+                                            "Error",
+                                            Toast.LENGTH_LONG).show();
                                 }
+                                queue.add(stringRequest);
                             };
                         }
-                    }
-
+                    });
                 }
             });
         }
