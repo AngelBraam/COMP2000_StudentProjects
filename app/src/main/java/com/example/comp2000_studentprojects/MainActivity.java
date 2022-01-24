@@ -3,6 +3,7 @@ package com.example.comp2000_studentprojects;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
+import android.widget.Button;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 import androidx.navigation.NavController;
@@ -60,8 +61,11 @@ public class MainActivity extends AppCompatActivity {
                 || super.onSupportNavigateUp();
     }
 
+    //public class SubmitProjectButton extends AppCompatActivity{
+      //  private Button
+    //}
     //@Override
-    public void onClick(){
+    //public void onClick(@+id/btnSubmitProject){
 
-    }
+    //}
 }

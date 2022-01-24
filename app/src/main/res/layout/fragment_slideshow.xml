@@ -8,7 +8,7 @@
         tools:context=".ui.slideshow.SlideshowFragment">
 
     <TextView
-            android:id="@+id/text_slideshow"
+            android:id="@+id/txtUpdate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -19,5 +19,107 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintVertical_bias="0.011"
+            android:text="Here you can update or delete your project"
+            app:layout_constraintBottom_toTopOf="@+id/editStudentIDUD"/>
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/editStudentIDUD"
+            android:hint="Student ID (only fill this if you want to delete your project)"
+            app:layout_constraintTop_toBottomOf="@+id/txtUpdate"
+            app:layout_constraintBottom_toTopOf="@+id/editProjectTitleUD"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/editProjectTitleUD"
+            android:hint="Project Title"
+            app:layout_constraintTop_toBottomOf="@+id/editStudentIDUD"
+            app:layout_constraintBottom_toTopOf="@+id/editProjectDescriptionUD"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/editProjectDescriptionUD"
+            android:hint="Description"
+            app:layout_constraintTop_toBottomOf="@+id/editProjectTitleUD"
+            app:layout_constraintBottom_toTopOf="@+id/editProjectYearUD"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/editProjectYearUD"
+            android:hint="Year"
+            app:layout_constraintTop_toBottomOf="@+id/editProjectDescriptionUD"
+            app:layout_constraintBottom_toTopOf="@+id/editFirstNameUD"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/editFirstNameUD"
+            android:hint="First Name"
+            app:layout_constraintTop_toBottomOf="@+id/editProjectYearUD"
+            app:layout_constraintBottom_toTopOf="@+id/editLastNameUD"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/editLastNameUD"
+            android:hint="Last Name"
+            app:layout_constraintTop_toBottomOf="@+id/editFirstNameUD"
+            app:layout_constraintBottom_toTopOf="@+id/btnUpdate"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+            android:text="Update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnUpdate"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editLastNameUD"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.164"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+            android:text="Delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnDelete"
+            app:layout_constraintStart_toEndOf="@+id/btnUpdate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editLastNameUD"
             app:layout_constraintBottom_toBottomOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
