@@ -59,21 +59,26 @@ public class HomeFragment extends Fragment {
 
                 String url = "web.socem.plymouth.ac.uk/COMP2000/api/students";
                 JSONObject jsonObject = new JSONObject(Request.Method.POST, url, null,
-                        new JSONObject(tempstudentId, tempTitle, tempDescription, tempYear, tempFirstName, tempLastName) {
+                        new JSONObject(tempstudentId, tempTitle, tempDescription, tempYear, tempFirstName, tempLastName); try{
                     jsonObject.put("StudentID", tempstudentId);
                     jsonObject.put("Title", tempTitle);
                     jsonObject.put("Description", tempDescription);
                     jsonObject.put("Year", tempYear);
                     jsonObject.put("First Name", tempFirstName);
                     jsonObject.put("Last Name", tempLastName);
-                        },new Response.ErrorListener() {
-                            @Override
-                            public void onErrorResponse(VolleyError error) {
-                                Toast.makeText(MainActivity.this,
-                                        "Error",
-                                        Toast.LENGTH_LONG).show();
-                            }
-                        });
+                        } catch (Exception e){
+                    Toast.makeText(MainActivity.this,
+                            "Error" + e,
+                            Toast.LENGTH_LONG).show();
+                },new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Toast.makeText(MainActivity.this,
+                                "Error" + error,
+                                Toast.LENGTH_LONG).show();
+                    }
+                };
+                queue.add(jsonObjectRequest);
                     }
                 });
 

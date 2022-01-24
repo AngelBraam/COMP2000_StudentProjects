@@ -61,7 +61,7 @@ public class GalleryFragment extends Fragment {
                                 @Override
                                 public void onErrorResponse(VolleyError error){
                                     Toast.makeText(MainActivity.this,
-                                            "Error",
+                                            "Error" + error,
                                             Toast.LENGTH_LONG).show();
                                 }
                                 queue.add(stringRequest);
