@@ -57,7 +57,7 @@ public class GalleryFragment extends Fragment {
                         public void onResponse(JSONObject studentProjects) {
                             public void onResponse (JsonObject studentProjects){
                                 findViewById(R.id.txtViewProjects).setText(response.toString());
-                            },new Response.ErrorListener() {
+                            }new Response.ErrorListener() {
                                 @Override
                                 public void onErrorResponse(VolleyError error){
                                     Toast.makeText(MainActivity.this,

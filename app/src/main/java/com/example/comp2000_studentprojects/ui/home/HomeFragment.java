@@ -64,13 +64,13 @@ public class HomeFragment extends Fragment {
                     jsonObject.put("Title", tempTitle);
                     jsonObject.put("Description", tempDescription);
                     jsonObject.put("Year", tempYear);
-                    jsonObject.put("First Name", tempFirstName);
-                    jsonObject.put("Last Name", tempLastName);
+                    jsonObject.put("First_Name", tempFirstName);
+                    jsonObject.put("Last_Name", tempLastName);
                         } catch (Exception e){
                     Toast.makeText(MainActivity.this,
                             "Error" + e,
                             Toast.LENGTH_LONG).show();
-                },new Response.ErrorListener() {
+                }new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         Toast.makeText(MainActivity.this,
